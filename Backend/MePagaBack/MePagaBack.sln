@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MePagaBack.API", "MePagaBack.API.csproj", "{C872A7C3-CCD0-4873-98C9-FAB0C849A8BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MePagaBack.API", "MePagaBack.API.csproj", "{C872A7C3-CCD0-4873-98C9-FAB0C849A8BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MePagaBack.Domain", "..\MePagaBack.Domain\MePagaBack.Domain.csproj", "{B6F2613D-C667-4730-9FE5-3961E92F9C1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MePagaBack.Data", "..\MePagaBack.Data\MePagaBack.Data.csproj", "{A287DC1A-34CE-460B-8752-146498B024F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C872A7C3-CCD0-4873-98C9-FAB0C849A8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C872A7C3-CCD0-4873-98C9-FAB0C849A8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C872A7C3-CCD0-4873-98C9-FAB0C849A8BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6F2613D-C667-4730-9FE5-3961E92F9C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F2613D-C667-4730-9FE5-3961E92F9C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F2613D-C667-4730-9FE5-3961E92F9C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F2613D-C667-4730-9FE5-3961E92F9C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A287DC1A-34CE-460B-8752-146498B024F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A287DC1A-34CE-460B-8752-146498B024F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A287DC1A-34CE-460B-8752-146498B024F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A287DC1A-34CE-460B-8752-146498B024F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
