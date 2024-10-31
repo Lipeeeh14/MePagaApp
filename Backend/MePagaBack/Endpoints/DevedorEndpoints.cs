@@ -10,5 +10,20 @@ internal static class DevedorEndpoints
         {
             return Results.Ok();
         });
+
+        group.MapGet("{id}", (long id) =>
+        {
+            return Results.Ok();
+        });
+
+        group.MapPost("/", () => 
+        {
+            return Results.Ok();
+        });
+
+        group.MapPut("/", () =>
+        {
+            return Results.Ok();
+        });
     }
 }

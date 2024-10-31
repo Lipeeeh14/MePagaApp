@@ -5,6 +5,9 @@ namespace MePagaBack.Domain.Models;
 public class Devedor : BaseModel
 {
     public string Nome { get; private set; } = string.Empty;
+    public string? Email { get; private set; }
+    public string NumeroTelefone { get; private set; } = string.Empty;
+
     public bool Ativa { get; set; } = true;
 
     public ICollection<Divida> Dividas { get; private set; } = [];
@@ -13,14 +16,11 @@ public class Devedor : BaseModel
     {
     }
 
-    public Devedor(string nome)
+    public Devedor(string nome, string? email, string numeroTelefone, bool ativa)
     {
         Nome = nome;
-    }
-
-    public Devedor(string nome, bool ativa)
-    {
-        Nome = nome;
+        Email = email;
+        NumeroTelefone = numeroTelefone;
         Ativa = ativa;
     }
 }
