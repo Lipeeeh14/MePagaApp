@@ -16,11 +16,26 @@ public class Devedor : BaseModel
     {
     }
 
-    public Devedor(string nome, string? email, string numeroTelefone, bool ativa)
+    public Devedor(string nome, string? email, string numeroTelefone)
     {
         Nome = nome;
         Email = email;
         NumeroTelefone = numeroTelefone;
-        Ativa = ativa;
+    }
+
+    public Devedor(string nome, string? email, string numeroTelefone, bool ativo)
+    {
+        Nome = nome;
+        Email = email;
+        NumeroTelefone = numeroTelefone;
+        Ativa = ativo;
+    }
+
+    public void Atualizar(string nome, string? email, string numeroTelefone, bool ativo) 
+    {
+        Nome = nome;
+        Email = email;
+        NumeroTelefone = numeroTelefone;
+        Ativa = ativo;
     }
 }

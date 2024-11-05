@@ -1,4 +1,7 @@
-﻿namespace MePagaBack.API.Endpoints;
+﻿using MePagaBack.Domain.DTO;
+using MePagaBack.Domain.Services.Interfaces;
+
+namespace MePagaBack.API.Endpoints;
 
 internal static class DevedorEndpoints
 {
@@ -6,24 +9,28 @@ internal static class DevedorEndpoints
     {
         var group = app.MapGroup("devedor");
 
-        group.MapGet("/", () =>
+        group.MapGet("/", async (IDevedorService service) => 
+            Results.Ok(await service.ConsultarDevedores()));
+
+        group.MapGet("{id}", async (IDevedorService service, long id) =>
         {
-            return Results.Ok();
+            var result = await service.ConsultarDevedorPorId(id);
+
+            if (result is null) return Results.BadRequest();
+
+            return Results.Ok(result);
         });
 
-        group.MapGet("{id}", (long id) =>
-        {
-            return Results.Ok();
-        });
+        group.MapPost("/", async (IDevedorService service, CadastrarDevedorDTO dto) 
+            => Results.Ok(await service.Cadastrar(dto)));
 
-        group.MapPost("/", () => 
+        group.MapPut("/", async (IDevedorService service, AtualizarDevedorDTO dto) =>
         {
-            return Results.Ok();
-        });
+            var result = await service.Atualizar(dto);
 
-        group.MapPut("/", () =>
-        {
-            return Results.Ok();
+            if (result is null) return Results.BadRequest();
+
+            return Results.Ok(result);
         });
     }
 }

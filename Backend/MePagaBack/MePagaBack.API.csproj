@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MePagaBack.Data\MePagaBack.Data.csproj" />
-    <ProjectReference Include="..\MePagaBack.Domain\MePagaBack.Domain.csproj" />
   </ItemGroup>
 
 </Project>

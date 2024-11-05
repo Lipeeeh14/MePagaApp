@@ -1,6 +1,6 @@
 ﻿using MePagaBack.Domain.Models;
 
-namespace MePagaBack.Data.Repositories.Interfaces;
+namespace MePagaBack.Domain.Repositories.Interfaces;
 
 public interface IDevedorRepository : IBaseRepository<Devedor>
 {
