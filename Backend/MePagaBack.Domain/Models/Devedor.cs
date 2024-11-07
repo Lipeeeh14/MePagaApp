@@ -25,15 +25,6 @@ public class Devedor : BaseModel
         AtribuirEmail(email);
     }
 
-    public Devedor(string nome, string? email, string numeroTelefone, bool ativo)
-    {
-        Nome = nome;
-        NumeroTelefone = numeroTelefone;
-        Ativa = ativo;
-
-        AtribuirEmail(email);
-    }
-
     public void Atualizar(string nome, string? email, string numeroTelefone, bool ativo) 
     {
         Nome = nome;
