@@ -29,7 +29,7 @@ public class DevedorService : IDevedorService
 
             return new DevedorViewModel(devedor.Id, 
                 devedor.Nome, 
-                devedor.Email, 
+                devedor.Email?.Email, 
                 devedor.NumeroTelefone, 
                 devedor.Ativa, 
                 devedor.DataCriacao, 
@@ -56,7 +56,7 @@ public class DevedorService : IDevedorService
 
             return new DevedorViewModel(devedor.Id,
                 devedor.Nome,
-                devedor.Email,
+                devedor.Email?.Email,
                 devedor.NumeroTelefone,
                 devedor.Ativa,
                 devedor.DataCriacao,
@@ -76,7 +76,7 @@ public class DevedorService : IDevedorService
 
         var devedoresVm = devedores.Select(x => new DevedorViewModel(x.Id,
             x.Nome,
-            x.Email,
+            x.Email?.Email,
             x.NumeroTelefone,
             x.Ativa,
             x.DataCriacao,
@@ -93,7 +93,7 @@ public class DevedorService : IDevedorService
 
         return new DevedorViewModel(devedor.Id,
             devedor.Nome,
-            devedor.Email,
+            devedor.Email?.Email,
             devedor.NumeroTelefone,
             devedor.Ativa,
             devedor.DataCriacao,

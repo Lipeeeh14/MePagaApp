@@ -1,4 +1,6 @@
 ﻿using MePagaBack.Domain.Models;
+using MePagaBack.Domain.ValueObjects;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace MePagaBack.Data.Configuration.Mapping;
@@ -13,8 +15,10 @@ public class DevedorMapping : BaseMapping<Devedor>
             .HasMaxLength(100)
             .IsRequired();
 
-        builder.Property(x => x.Email)
+        builder.OwnsOne(x => x.Email)
+            .Property(x => x.Email)
             .HasMaxLength(100)
+            .HasColumnName(nameof(EmailValueObject.Email))
             .IsRequired(false);
 
         builder.Property(x => x.Ativa)
