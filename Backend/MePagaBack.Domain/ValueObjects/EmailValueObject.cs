@@ -1,4 +1,4 @@
-﻿using System.Net.Mail;
+﻿using MePagaBack.Domain.Helpers.ErrorMessages;
 using System.Text.RegularExpressions;
 
 namespace MePagaBack.Domain.ValueObjects;
@@ -7,12 +7,12 @@ public class EmailValueObject
 {
     public string Email { get; private set; }
 
-    private string EMAIL_REGEX = new("^\\S+@\\S+\\.\\S+$");
+    private readonly string EMAIL_REGEX = new("^\\S+@\\S+\\.\\S+$");
 
     public EmailValueObject(string email)
     {
         if (string.IsNullOrEmpty(email)) 
-            throw new ArgumentNullException("E-mail inválido.");
+            throw new ArgumentNullException(ModelsErrorMessages.EmailErrorMessage);
 
         ValidarEmail(email);
         Email = email;
@@ -25,6 +25,6 @@ public class EmailValueObject
         var isValid = validateEmailRegex.IsMatch(email);
 
         if (!isValid)
-            throw new FormatException("E-mail inválido.");
+            throw new FormatException(ModelsErrorMessages.EmailErrorMessage);
     }
 }

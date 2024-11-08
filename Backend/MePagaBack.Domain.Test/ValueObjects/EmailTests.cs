@@ -1,4 +1,5 @@
-﻿using MePagaBack.Domain.ValueObjects;
+﻿using MePagaBack.Domain.Helpers.ErrorMessages;
+using MePagaBack.Domain.ValueObjects;
 
 namespace MePagaBack.Domain.Test.ValueObjects;
 
@@ -9,7 +10,7 @@ public class EmailTests
     [InlineData("")]
     public void DeveFalharQuandoEmailForNuloOuVazio(string email)
     {
-        var error = "E-mail inválido.";
+        var error = ModelsErrorMessages.EmailErrorMessage;
 
         void action() => new EmailValueObject(email);
 

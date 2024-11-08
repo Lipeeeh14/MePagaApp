@@ -1,4 +1,5 @@
 ﻿using MePagaBack.Domain.Models.Base;
+using MePagaBack.Domain.Models.ValidadeModel;
 using MePagaBack.Domain.ValueObjects;
 
 namespace MePagaBack.Domain.Models;
@@ -21,6 +22,8 @@ public class Devedor : BaseModel
     {
         Nome = nome;
         NumeroTelefone = numeroTelefone;
+
+        this.Validar();
         
         AtribuirEmail(email);
     }
