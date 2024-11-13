@@ -6,7 +6,7 @@ namespace MePagaBack.Data.Repositories;
 
 public class BaseRepository<T> : IBaseRepository<T> where T : BaseModel
 {
-    private readonly MePagaDbContext _context;
+    protected readonly MePagaDbContext _context;
 
     public BaseRepository(MePagaDbContext context) => _context = context;
 

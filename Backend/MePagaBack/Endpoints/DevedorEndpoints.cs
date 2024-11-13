@@ -9,6 +9,8 @@ internal static class DevedorEndpoints
     {
         var group = app.MapGroup("devedor");
 
+        group.WithTags("Devedor");
+
         group.MapGet("/", async (IDevedorService service) => 
             Results.Ok(await service.ConsultarDevedores()));
 

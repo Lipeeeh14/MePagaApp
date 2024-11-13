@@ -35,5 +35,6 @@ public static class BuilderExtensions
     private static void AddServices(this WebApplicationBuilder builder) 
     {
         builder.Services.AddScoped<IDevedorService, DevedorService>();
+        builder.Services.AddScoped<IDividaService, DividaService>();
     }
 }

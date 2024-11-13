@@ -47,7 +47,7 @@ public class DevedorService : IDevedorService
         {
             var devedor = await _devedorRepository.ObterPorId(dto.Id);
 
-            if (devedor == null) return null!;
+            if (devedor is null) return null!;
 
             devedor.Atualizar(dto.Nome, dto.Email, dto.NumeroTelefone, dto.Ativo);
 

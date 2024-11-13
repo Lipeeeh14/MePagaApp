@@ -14,6 +14,20 @@ public class Divida : BaseModel
     {
     }
 
+    public Divida(decimal valor, long devedorId)
+    {
+        Valor = valor;
+        DevedorId = devedorId;
+    }
+
+    public void Atualizar(decimal valor, bool quitada) 
+    {
+        Valor = valor;
+        Quitada = quitada;
+
+        base.Atualizar();
+    }
+
     public void DividaQuitada()
     {
         Atualizar();
